@@ -1,26 +1,55 @@
+/* vyber všechny elementy, jejich class je "divSTextem" */
 .divSTextem {
-    color: green;
-    margin: 20px;
-    padding: 20px;
-    border: 2px solid black;
-    text-align: center;
+  /* nastav barvu textu na zeleno */
+  color: green;
+
+  /* nastav vnější výplň (odsazení) elementu na 20px */
+  margin: 20px;
+
+  /* nastav vnitřní výplň (odsazení) elementu na 20px */
+  padding: 20px;
+
+  /* nastav ohraničení takto: 2px tloušťka, nepřerušovaná čára, barva čáry černá */
+  border: 2px solid black;
+
+  /* vystřeď text do středu */
+  text-align: center;
 }
 
+/* vyber ten element, jehož id je "konkretniText" */
 #konkretniText {
-    color: red;
-    font-size: 22px;
+  color: red;
+  font-size: 22px;
 }
 
-/* id > class > element */
+/* z hlediska priority je to takto: id > class > element */
 
+/* elementy lze vybírat i takto, vybere to ale všechny elementy */
 div {
-
+  /* nastav pouze horní margin na 10px */
+  margin-top: 10px;
 }
 
 button {
-
+  background-color: green;
 }
 
-nav {
+/* nastav elementům header, nav a ul červenou barvu textu */
+header,
+nav,
+ul {
+  color: red;
+}
 
+/* vyber element "ul" nacházející se v elementu "nav" */
+nav ul {
+  /* zobraz element "ul" jako "flex", což je speciální typ kontejneru/layoutu, používá se asi nejvíc */
+  display: flex;
+
+  /* umožňuje totiž dělat věci jako */
+  /* nech mezi jednotlivými obsahy velkou mezeru resp. roztáhni obsah na celou šířku dokumentu  */
+  justify-content: space-between;
+
+  /* pokud je obsah tak široký, že se nevejde do jednoho řádku, posuň ten obsah elementu který se nevejde na další řádek */
+  flex-wrap: wrap;
 }

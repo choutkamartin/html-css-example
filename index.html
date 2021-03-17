@@ -1,43 +1,91 @@
+<!-- definuje prohlížeči, že se jedná o dokument v jazyce HTML, konkrétně poslední verze HTML5 -->
 <!DOCTYPE html>
+<!-- "html" definuje začátek dokumentu, "lang" značí v jakém jazyce je dokument/stránka -->
 <html lang="cs">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- meta tag pro responsivitu, bez něj není možné psát responsivní weby pro mobily -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- "title" značí název webové stránky, zobrazuje se například na kartě Google Chrome -->
     <title>Webovka</title>
+
+    <!-- Open Graph tagy, obsah v atributu "content" využívá Facebook a Twitter -->
+    <meta property="og:url" content="https://www.ukazkovawebovastranka.cz/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ukázková webová stránka" />
+    <meta
+      property="og:description"
+      content="Tohle je ukázková webová stránka pro cvičení ze značkovacích jazyků."
+    />
+    <meta property="og:image" content="placeholder.png" />
+
+    <!-- "link" značí načtení nějakého dokumentu, v "rel" je stylesheet, protože načítáme styl, "href" značí cestu ke stylu -->
     <link rel="stylesheet" href="style.css" />
   </head>
+
+  <!-- hlavní tělo dokumentu, sem se vkládá obsah, který je vykreslen prohlížečem -->
   <body>
-    <!-- Hlavička -->
-    <header></header>
-    <nav></nav>
-    <main></main>
-    <section>
-      <h1></h1>
-    </section>
-    <aside></aside>
+    <!-- "header" je záhlaví webové stránky, obsahuje kromě navigace tedy např. odkaz na sociální sítě, vyhledávácí formulář  -->
+    <header>
+      <h1>Název webu</h1>
+
+      <!-- "nav" je navigace, slouží jako menu -->
+      <nav>
+        <!-- "ul" značí nesetříděný seznam -->
+        <ul>
+          <!-- "li" jsou jednotlivé položky seznamu (v našem případě spíše menu) -->
+          <li>Domů</li>
+          <li>Projekty</li>
+          <li>Škola</li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- "main značí hlavní obsah dokumentu -->
+    <main>
+      <!-- "section", značí nějakou určitou část webu, např. novinky -->
+      <section>
+        <!-- každá "section" by měla obsahovat nadpis -->
+        <h2></h2>
+        <!-- "article" je část obsahu v sekci, doslova nějaký "článek" -->
+        <article></article>
+      </section>
+      <!-- "aside" je element, který značí nějakou část na straně dokumentu, může to být napravo třeba formulář pro přihlašování -->
+      <aside></aside>
+    </main>
+    <!-- "footer" značí zápatí dokumentu, obsahuje nějaké odkazy, konktatní informace -->
     <footer></footer>
+
+    <!-- Nadpisy -->
     <h1>Nadpis 1</h1>
     <h2>Nadpis 2</h2>
     <h3>Nadpis 3</h3>
     <h4>Nadpis 4</h4>
     <h5>Nadpis 5</h5>
     <h6>Nadpis 6</h6>
+
+    <!-- "p" značí paragraf textu -->
     <p>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia harum
       incidunt architecto quis cupiditate impedit non iure, laborum nulla
       expedita provident in a et deleniti perferendis rerum explicabo fugit
       omnis!
     </p>
-    <ul>
-      <li>Položka 1</li>
-      <li>Položka 2</li>
-    </ul>
+
+    <!-- "ol" je setříděný seznam, jednotlivé položky začínají číslicí -->
     <ol>
       <li>Položka 1</li>
       <li>Položka 2</li>
     </ol>
+
+    <!-- "img" značí obrázek, odkaz na obrázek se vkládá do "src", "alt" značí alternativní text, který se zobrazuje na čtečkách např. zrakově postižneým, nebo pokud se obrázek nenačte -->
     <img src="placeholder.png" alt="Placeholder fotka" />
+
+    <!-- "table" značí tabulku -->
     <table>
+      <!-- "thead" označuje záhlaví tabulky -->
       <thead>
         <tr>
           <th>Jméno</th>
@@ -45,6 +93,8 @@
           <th>Věk</th>
         </tr>
       </thead>
+
+      <!-- "tbody" označuje hlavní tělo tabulky, místo kam se vkládají data -->
       <tbody>
         <tr>
           <th>Adam</th>
@@ -57,21 +107,39 @@
           <th>22</th>
         </tr>
       </tbody>
+
+      <!-- "tfoot" značí zápatí tabulky, může se zde nacházet třeba součet jednotlivých sloupců tabulky -->
       <tfoot></tfoot>
     </table>
+
+    <!-- "a" značí odkaz, do "href" se píše buď odkaz na externí stránku, nebo slouží jako navigace v dokumentu pomocí používání # -->
     <a href="https://www.seznam.cz" target="_blank">Odkaz na webovku</a>
+
+    <!-- "form" značí formulář, do "action" se píše cesta, kam se mají data posílat, "method" je metoda - většinou je to POST (nahrání dat, zpracování nějaké akce), nebo GET (získání dat, stránky) -->
     <form action="form/submit" method="POST">
+      <!-- "input" značí pole, do typu se uvádí text, number a tak dále, "name" obsahuje název prvku (nutné pro získání dat na serveru) -->
       <input type="text" name="jmeno" />
       <input type="number" name="vek" />
+
+      <!-- "textarea" značí pole, do kterého je možné zadat větší blok textu -->
       <textarea name="bloktextu" id="" cols="30" rows="10"></textarea>
+
+      <!-- "button" značí tlačítko, "type" značí typ, většinou button nebo submit -->
       <button type="submit">Tlačítko</button>
     </form>
+
+    <!-- "figure" je obal pro nějaký prvek (fotka, audio, video), kterému chceme dát titulek -->
     <figure>
-      <img src="placeholder.png" alt="" />
+      <img src="placeholder.png" alt="Placeholder fotka" />
+
+      <!-- "figcaption" značí konkrétní titutek -->
       <figcaption>První fotka</figcaption>
     </figure>
 
+    <!-- "div" je element, kterým se obalujou ostatní elementy (je to takový kontejner) -->
     <div class="divSTextem" id="konkretniText">Text</div>
+
+    <!-- "span" je to stejné co "div", ale v základu nezabírá celou šířku dokumentu nebo rodiče -->
     <span class="divSTextem">Text</span>
   </body>
 </html>
