@@ -1,0 +1,26 @@
+.divSTextem {
+    color: green;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+#konkretniText {
+    color: red;
+    font-size: 22px;
+}
+
+/* id > class > element */
+
+div {
+
+}
+
+button {
+
+}
+
+nav {
+
+}
